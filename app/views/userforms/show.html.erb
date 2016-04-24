@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @userform.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @userform.age %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @userform.email %>
+</p>
+
+<p>
+  <strong>Contact no:</strong>
+  <%= @userform.contact_no %>
+</p>
+
+<p>
+  <strong>Interest:</strong>
+  <%= @userform.interest %>
+</p>
+
+<%= link_to 'Edit', edit_userform_path(@userform) %> |
+<%= link_to 'Back', userforms_path %>

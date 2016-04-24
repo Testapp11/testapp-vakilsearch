@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team_name: MyString
+  team_technology: MyString
+  team_project: MyString
+  removed: false
+  userform_id: 
+
+two:
+  team_name: MyString
+  team_technology: MyString
+  team_project: MyString
+  removed: false
+  userform_id: 

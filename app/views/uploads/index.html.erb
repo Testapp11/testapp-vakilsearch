@@ -1,0 +1,8 @@
+<h1>All AWS uploads</h1>
+<% @uploads.each do |upload| %>
+    <div>
+      <% if upload.url.downcase.ends_with?".csv" %>
+      <%= link_to upload.name, upload.url,target: "_blank" %>
+      <% end %>
+    </div>
+<% end %>

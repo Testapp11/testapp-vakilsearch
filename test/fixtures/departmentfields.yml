@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dept_name: MyString
+  dept_description: MyString
+  removed: false
+  userform_id: 
+
+two:
+  dept_name: MyString
+  dept_description: MyString
+  removed: false
+  userform_id: 

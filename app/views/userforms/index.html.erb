@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Details</h1>
+
+<table id="userdetails" class="display">
+  <thead style="border: 2px solid grey;">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Email</th>
+    <th>Contact</th>
+    <th>Interest</th>
+    <th>T Name</th>
+    <th>T Tech</th>
+    <th>T proj</th>
+    <th>D Name</th>
+    <th>D Desc</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @userforms.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.age %></td>
+        <td><%= user.email %></td>
+        <td><%= user.contact_no %></td>
+        <td><%= user.interest %></td>
+        <td>
+          <% user.teams.each do |team| %>
+              <%= team.team_name.strip if !team.removed %>&nbsp;
+          <% end %>
+        </td>
+        <td>
+          <% user.teams.each do |team| %>
+              <%= team.team_technology.strip if !team.removed %>&nbsp;
+          <% end %>
+        </td>
+        <td>
+          <% user.teams.each do |team| %>
+              <%= team.team_project.strip if !team.removed %>&nbsp;
+          <% end %>
+        </td>
+        <td>
+        <% user.departments.each do |dept| %>
+            <%= dept.dept_name.strip if !dept.removed %>&nbsp;
+        <% end %>
+       </td>
+        <td>
+          <% user.departments.each do |dept| %>
+              <%= dept.dept_description.strip if !dept.removed %>&nbsp;
+          <% end %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<p>
+  <strong>Download:</strong>
+  <%= link_to "CSV", userforms_path(format: "csv") %> |
+  <%= link_to "Upload to AWS S3", uploads_new_path %>
+</p>
+
+

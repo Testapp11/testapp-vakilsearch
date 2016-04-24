@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Testapp | Vakilsearch</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body style="background-color: lightgray;">
+
+<h1 class="center">NestedForm App</h1>
+
+<!-- Menu ui-->
+<div id="centeredmenu">
+  <ul>
+    <li><%= link_to "All Details", userforms_path %></li>
+    <li><%= link_to "New Entry",new_userform_path %></li>
+    <li><%= link_to "Upload CSV to S3", uploads_new_path %></li>
+    <li><%= link_to "View S3 Bucket items", uploads_index_path %></li>
+  </ul>
+</div><br><br>
+
+<%= yield %>
+
+</body>
+</html>

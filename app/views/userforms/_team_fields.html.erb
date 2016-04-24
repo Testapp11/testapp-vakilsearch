@@ -1,0 +1,11 @@
+<fieldset>
+  <%= f.label "Team Name"%>
+  <%= f.text_field :team_name,:size=>"50", placeholder: "Enter Team name" %><br><br>
+  <%= f.label "Team Technology"%>
+  <%= f.text_field :team_technology,:size=>"50", placeholder: "Enter Team technology" %><br><br>
+  <%= f.label "Team Project"%>
+  <%= f.text_field :team_project,:size=>"50", placeholder: "Enter Team project" %><br>
+  <%= f.hidden_field :_destroy %><hr>
+  <%= f.check_box :removed,class: "hide" %>
+  <%= link_to "remove", '#', class: "remove_fields" %>
+</fieldset><br>

@@ -1,0 +1,9 @@
+<fieldset>
+  <%= f.label "Dept Name"%>
+  <%= f.text_field :dept_name,:size=>"50", placeholder: "Enter Dept name" %><br><br>
+  <%= f.label "Dept Decription"%>
+  <%= f.text_field :dept_description,:size=>"50", placeholder: "Enter Dept description" %><br>
+  <%= f.hidden_field :_destroy %><hr>
+  <%= f.check_box :removed,class: "hide" %>
+  <%= link_to "remove", '#', class: "remove_fields" %>
+</fieldset><br>
